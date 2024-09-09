@@ -23,11 +23,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider afterSignOutUrl="/" appearance={{
-      variables: { colorPrimary: '#272E3F' }
-    }}>
+    <ClerkProvider 
+      afterSignOutUrl="/" 
+      signInForceRedirectUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL}
+      signUpForceRedirectUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL}
+      appearance={{
+        variables: { colorPrimary: '#272E3F' }
+      }}
+    >
 
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      </head>
       <body
         className={cn("font-IBMPlex antialiased", inter.variable)}
       >

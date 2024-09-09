@@ -1,17 +1,17 @@
 import { PropsWithChildren } from 'react'
-import { MainSidebar } from './_components/main-sidebar'
 import { DashboardPage, DashboardPageHeader, DashboardPageHeaderTitle, DashboardPageMain } from '@/components/dashboard/page'
-import { UserButton } from '@clerk/nextjs'
+import MobileSidebar from '@/app/app/_components/mobile-sidebar'
+import { MainSidebar } from './_components/main-sidebar'
 
 export default async function Layout({ children }: PropsWithChildren) {
 	return (
-		<div className="grid grid-cols-[16rem_1fr] w-full">
+		<div className="md:grid md:grid-cols-[16rem_1fr] w-full">
 			<MainSidebar/>
+      <MobileSidebar/>
 			<main>
         <DashboardPage>
           <DashboardPageHeader>
-            <DashboardPageHeaderTitle>Home</DashboardPageHeaderTitle>
-            <UserButton />
+            <DashboardPageHeaderTitle><span></span></DashboardPageHeaderTitle>
 
           </DashboardPageHeader>
           <DashboardPageMain>

@@ -3,7 +3,7 @@ import { SettingsSidebar } from './_components/settings-sidebar'
 
 export default function Layout({ children }: PropsWithChildren) {
 	return (
-    <div className="grid grid-cols-[16rem_40rem] gap-12">
+    <div className="grid md:grid-cols-[1rem_1rem] lg:grid-cols-[16rem_40rem] gap-12">
       <aside>
         <SettingsSidebar />
       </aside>
