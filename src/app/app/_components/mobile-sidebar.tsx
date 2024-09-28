@@ -17,7 +17,7 @@ const MobileSidebar = () => {
   }
 
   return (
-    <SidebarHeader className="header md:hidden">
+    <SidebarHeader className="header hidden">
       
       <Link href="/" className="flex items-center gap-2 md:py-2">
         <Image 
@@ -47,9 +47,9 @@ const MobileSidebar = () => {
                   width={148}
                   height={24}
                 />
-                <SidebarMain className="flex flex-col flex-grow px-0 mt-6">
+                <SidebarMain className="flex flex-grow px-0 mt-6">
                   <SidebarNav>
-                    <SidebarNavMain>
+                    <SidebarNavMain className="flex-row!important">
                     {navLinks.map((nav) => (
                       <SidebarNavLink 
                         href={nav.route} 

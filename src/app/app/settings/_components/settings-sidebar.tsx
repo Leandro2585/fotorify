@@ -16,7 +16,7 @@ export function SettingsSidebar() {
 	return (
 		<aside>
 			<SidebarNav>
-				<SidebarNavMain>
+				<SidebarNavMain className="max-sm:flex-row ">
 					<SidebarNavLink
 						href="/app/settings"
 						active={isActive('/app/settings')}
