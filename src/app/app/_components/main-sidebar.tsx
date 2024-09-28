@@ -15,9 +15,11 @@ import Link from 'next/link'
 import { UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import { navLinks } from '@/constants'
+import { useTheme } from 'next-themes'
 
 export function MainSidebar() {
   const pathname = usePathname()
+  const { theme } = useTheme()
   const isActive = (path: string) => {
     return path.split('/').filter(Boolean).length === 2
     ? pathname.startsWith(path)
@@ -26,9 +28,9 @@ export function MainSidebar() {
   
   return (
     <Sidebar className="hidden md:flex">
-      <SidebarHeader>
+      <SidebarHeader className="justify-center">
         <Link href="/">
-          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
+          <Image src={`/assets/images/logo-text${theme === 'dark' ? '': '-dark' }.svg`} alt="logo" width={160} height={24} />
         </Link>
       </SidebarHeader>
       <SidebarMain className="flex flex-col flex-grow">

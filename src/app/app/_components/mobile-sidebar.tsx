@@ -7,9 +7,11 @@ import { Sheet, SheetContent, SheetTrigger } from "../../../components/ui/sheet"
 import { navLinks } from "@/constants"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import { useTheme } from "next-themes"
 
 const MobileSidebar = () => {
   const pathname = usePathname()
+  const { theme } = useTheme()
   const isActive = (path: string) => {
     return path.split('/').filter(Boolean).length === 2
     ? pathname.startsWith(path)
@@ -21,7 +23,7 @@ const MobileSidebar = () => {
       
       <Link href="/" className="flex items-center gap-2 md:py-2">
         <Image 
-          src="/assets/images/logo-text.svg" 
+          src={`/assets/images/logo-text-dark.svg`}
           alt="logo" 
           width={180} 
           height={28}
@@ -42,7 +44,7 @@ const MobileSidebar = () => {
             <SheetContent className="sheet-content sm:w-64">
               <>
                 <Image
-                  src="/assets/images/logo-text.svg"
+                  src={`/assets/images/logo-text${theme === 'dark' ? '' : '-dark'}.svg`}
                   alt="logo"
                   width={148}
                   height={24}
