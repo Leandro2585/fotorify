@@ -27,17 +27,12 @@ module.exports = {
     				'100': '#F4F7FE',
     				'200': '#BCB6FF',
     				'400': '#868CFF',
-    				'500': '#7857FF',
+    				'500': '#7216F4',
     				'600': '#4318FF'
     			},
-    			dark: {
-    				'400': '#7986AC',
-    				'500': '#606C80',
-    				'600': '#2B3674',
-    				'700': '#384262'
-    			},
     			primary: {
-    				DEFAULT: 'hsl(var(--primary))',
+    				// DEFAULT: 'hsl(var(--primary))',
+            DEFAULT: '#7216F4',
     				foreground: 'hsl(var(--primary-foreground))'
     			},
     			secondary: {

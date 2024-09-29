@@ -16,7 +16,7 @@ export default async function Layout({ children }: PropsWithChildren) {
           </DashboardPageHeader>
           <DashboardPageMain>
             <div className="container max-w-screen">
-              <div className="grid grid-cols-[16rem_1fr] min-sm:grid-cols-[1fr] gap-12">
+              <div className="grid sm:grid-cols-[1fr_1fr] min-sm:grid-cols-[1fr] gap-12">
                 <div>{children}</div>
               </div>
             </div>
